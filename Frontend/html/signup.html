@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/signup.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>PlantNest | Sign Up</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <form id="form">
+
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>PlantNest</span>
+            </div>
+
+            <h2>Create Account</h2>
+
+            <p class="subtitle">Create your PlantNest account</p>
+
+            <div id="input_group">
+
+                <div class="input_box">
+                    <label for="name">Name</label>
+
+                    <div class="input_wrapper">
+                        <i class="fa-regular fa-user input_icon"></i>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name">
+                    </div>
+                </div>
+
+                <div class="input_box">
+                    <label for="phone">
+                        Phone Number<sup>*</sup>
+                    </label>
+
+                    <div id="telephone">
+
+                        <input
+                            value="+91"
+                            disabled
+                            class="country_code">
+
+                        <div class="input_wrapper phone_input">
+                            <i class="fa-solid fa-phone input_icon"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter your mobile number">
+                        </div>
+
+                    </div>
+
+                    <small id="errorph"></small>
+                </div>
+
+                <div class="input_box">
+                    <label for="email">
+                        Email<sup>*</sup>
+                    </label>
+
+                    <div class="input_wrapper">
+                        <i class="fa-regular fa-envelope input_icon"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Please enter a valid email">
+                    </div>
+
+                    <small id="errore"></small>
+                </div>
+
+                <div class="input_box">
+                    <label for="password">
+                        Password<sup>*</sup>
+                    </label>
+
+                    <div class="input_wrapper">
+                        <i class="fa-solid fa-lock input_icon"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password">
+
+                        <span id="eye" onclick="showpassword()">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </span>
+                    </div>
+
+                    <small id="errorp"></small>
+                </div>
+
+                <div class="input_box">
+                    <label for="cpassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input_wrapper">
+                        <i class="fa-solid fa-lock input_icon"></i>
+
+                        <input
+                            type="password"
+                            id="cpassword"
+                            placeholder="Re-type your password">
+
+                        <span id="ceye" onclick="showcpassword()">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </span>
+                    </div>
+
+                    <small id="errorcp"></small>
+                </div>
+
+            </div>
+
+            <button id="btn" type="submit">
+                Sign Up
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p id="login_account">
+                <span>Already have an account?</span>
+                <a href="./login.html">Login</a>
+            </p>
+
+        </form>
+
+    </div>
+
+    <script src="../js/signup.js"></script>
+
+</body>
+
+</html>

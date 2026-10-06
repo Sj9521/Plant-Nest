@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantNest | Find Your Perfect Plant</title>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/findyourplant.css">
+</head>
+<body>
+
+    <!-- Minimal Brand Banner -->
+    <header class="minimal-header">
+        <button type="button" class="back-btn" onclick="goBack()" aria-label="Go back to previous page">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+        </button>
+        <a href="../html/home.html" class="logo">
+            <i class="fa-solid fa-seedling logo-icon"></i>
+            <span class="logo-text">PlantNest</span>
+        </a>
+        <div id="nav_btn">
+            <ul>
+                <!-- Wishlist -->
+                <li>
+                    <a href="../html/wishlist.html" aria-label="Wishlist">
+                        <i class="fa-regular fa-heart" title="Wishlist">
+                            <sup id="wishlist-counter">0</sup>
+                        </i>
+                    </a>
+                </li>
+
+                <!-- Cart -->
+                <li>
+                    <a href="../html/cart.html" aria-label="Shopping Cart">
+                        <i class="fa-sharp fa-solid fa-cart-shopping" title="Cart">
+                            <sup id="cart-counter">0</sup>
+                        </i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- Intro -->
+        <div class="heading">
+            <span class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Plant Matcher</span>
+            <h1>Find Your Perfect Plant</h1>
+            <p>Answer three quick questions and we'll match you with the ideal green companion for your space.</p>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="progress">
+            <div class="step active" id="step1">1</div>
+            <div class="line" id="line1"></div>
+            <div class="step" id="step2">2</div>
+            <div class="line" id="line2"></div>
+            <div class="step" id="step3">3</div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div class="quiz-card" id="quiz">
+
+            <!-- Question 1: Sunlight -->
+            <div class="question active" id="question1">
+                <h2>How much sunlight does your space get?</h2>
+                <p class="question-description">Choose the natural light level throughout the day.</p>
+
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 'sunlight', 'low')">
+                        <div class="option-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                        <h3>Low Light</h3>
+                        <p>Little to no direct rays; soft indirect ambiance.</p>
+                    </div>
+
+                    <div class="option" onclick="selectOption(this, 'sunlight', 'medium')">
+                        <div class="option-icon"><i class="fa-solid fa-sun-plant-wilt"></i></div>
+                        <h3>Medium Light</h3>
+                        <p>Filtered or moderate indirect sunlight for a few hours.</p>
+                    </div>
+
+                    <div class="option" onclick="selectOption(this, 'sunlight', 'bright')">
+                        <div class="option-icon"><i class="fa-solid fa-sun"></i></div>
+                        <h3>Bright Light</h3>
+                        <p>Plentiful direct or intense ambient light all day.</p>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn next-btn" onclick="nextQuestion(1)">
+                        Continue <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question 2: Location -->
+            <div class="question" id="question2">
+                <h2>Where will your plant live?</h2>
+                <p class="question-description">Select the primary environment for your plant.</p>
+
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 'location', 'bedroom')">
+                        <div class="option-icon"><i class="fa-solid fa-bed"></i></div>
+                        <h3>Bedroom / Indoor</h3>
+                        <p>Quiet room with stable temperature & shelter.</p>
+                    </div>
+
+                    <div class="option" onclick="selectOption(this, 'location', 'balcony')">
+                        <div class="option-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
+                        <h3>Balcony / Patio</h3>
+                        <p>Semi-outdoor or open airflow setting.</p>
+                    </div>
+
+                    <div class="option" onclick="selectOption(this, 'location', 'garden')">
+                        <div class="option-icon"><i class="fa-solid fa-tree"></i></div>
+                        <h3>Garden Area</h3>
+                        <p>Open ground or terrace with natural elements.</p>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn back-btn" onclick="previousQuestion(2)">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn next-btn" onclick="nextQuestion(2)">
+                        Continue <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question 3: Care Routine -->
+            <div class="question" id="question3">
+                <h2>How much care can you provide?</h2>
+                <p class="question-description">Pick an effort level that comfortably fits your routine.</p>
+
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 'care', 'low')">
+                        <div class="option-icon"><i class="fa-solid fa-droplet-slash"></i></div>
+                        <h3>Low Care</h3>
+                        <p>Forgiving and resilient; thrives even if neglected.</p>
+                    </div>
+
+                    <div class="option" onclick="selectOption(this, 'care', 'medium')">
+                        <div class="option-icon"><i class="fa-solid fa-hand-holding-droplet"></i></div>
+                        <h3>Moderate Care</h3>
+                        <p>Likes a regular weekly check-in and basic watering.</p>
+                    </div>
+
+                    <div class="option" onclick="selectOption(this, 'care', 'high')">
+                        <div class="option-icon"><i class="fa-solid fa-plant-wilt"></i></div>
+                        <h3>High Care</h3>
+                        <p>Loves dedicated attention, misting, and pruning.</p>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn back-btn" onclick="previousQuestion(3)">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn find-btn" onclick="findPlant()">
+                        <i class="fa-solid fa-leaf"></i> Reveal My Match
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Result View -->
+        <div id="result" style="display: none;">
+            <div class="result-heading">
+                <h2>Meet Your Perfect Match</h2>
+                <p>Curated based on your lighting, location, and maintenance lifestyle.</p>
+            </div>
+
+            <div class="plant-result">
+                <div class="plant-image" style="position: relative;">
+                    <img id="plantImage" src="" alt="Recommended Plant">
+                    <button type="button" class="wishlist-btn" id="resultWishlistBtn" onclick="toggleResultWishlist()" aria-label="Toggle wishlist" style="position: absolute; top: 15px; right: 15px; background: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                        <i class="fa-regular fa-heart" id="resultHeartIcon" style="font-size: 1.2rem; color: #e53935;"></i>
+                    </button>
+                </div>
+
+                <div class="plant-info">
+                    <span class="recommended"><i class="fa-solid fa-star"></i> BEST MATCH FOR YOU</span>
+                    <h2 id="plantName">Plant Name</h2>
+                    <p class="scientific" id="scientificName">Scientific Name</p>
+                    <p class="plant-description" id="plantDescription">Plant description goes here.</p>
+
+                    <div class="plant-details">
+                        <div class="detail">
+                            <strong><i class="fa-solid fa-sun"></i> Sunlight</strong>
+                            <span id="plantSunlight"></span>
+                        </div>
+                        <div class="detail">
+                            <strong><i class="fa-solid fa-droplet"></i> Water</strong>
+                            <span id="plantWater"></span>
+                        </div>
+                        <div class="detail">
+                            <strong><i class="fa-solid fa-location-dot"></i> Best Spot</strong>
+                            <span id="plantLocation"></span>
+                        </div>
+                        <div class="detail">
+                            <strong><i class="fa-solid fa-heart-pulse"></i> Care Level</strong>
+                            <span id="plantCare"></span>
+                        </div>
+                    </div>
+
+                    <div class="price-action-row">
+                        <div class="price" id="plantPrice">₹0</div>
+                        <button type="button" class="try-again" onclick="tryAgain()">
+                            <i class="fa-solid fa-rotate-right"></i> Retake Quiz
+                        </button>
+                        <button type="button" class="cart-btn" onclick="addCurrentMatchToCart()">
+                            <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Toast Notification Banner -->
+    <div id="toast-notification" class="toast-notification"></div>
+
+    <script src="../js/findyourplant.js"></script>
+</body>
+</html>

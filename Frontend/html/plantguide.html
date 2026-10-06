@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/plantguide.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>PlantNest | Plant Guide</title>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header id="navbar">
+
+        <!-- Logo -->
+        <div id="logo">
+            <i class="fa-solid fa-leaf"></i>
+            <span>PlantNest</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav id="nav_links">
+            <ul>
+                <li>
+                    <a href="../html/home.html">Home</a>
+                </li>
+
+                <!-- Plants Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Plants <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html/indoor.html"><i class="fa-solid fa-house-chimney-window"></i> Indoor Plants</a></li>
+                        <li><a href="../html/outdoor.html"><i class="fa-solid fa-tree"></i> outdoor Plants</a></li>
+                        <li><a href="../html/flowering.html"><i class="fa-solid fa-seedling"></i> Flowering Plants</a></li>
+                        <li><a href="../html/succulents.html"><i class="fa-solid fa-spa"></i> Succulents</a></li>
+                        <li><a href="../html/medicinal.html"><i class="fa-solid fa-mortar-pestle"></i> Medicinal Plants</a></li>
+                        <li><a href="../html/airpurifying.html"><i class="fa-solid fa-wind"></i> Air Purifying Plants</a></li>
+                    </ul>
+                </li>
+
+                <!-- Categories Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Categories <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html/categories.html#indoor"><i class="fa-solid fa-couch"></i> Indoor Plants</a></li>
+                        <li><a href="../html/categories.html#outdoor"><i class="fa-solid fa-tree"></i> Outdoor Plants</a></li>
+                        <li><a href="../html/categories.html#flowering"><i class="fa-solid fa-fan"></i> Flowering Plants</a></li>
+                        <li><a href="../html/categories.html#seeds"><i class="fa-solid fa-wheat-awn"></i> Seeds</a></li>
+                        <li><a href="../html/categories.html#pots"><i class="fa-solid fa-box-archive"></i> Pots & Planters</a></li>
+                        <li><a href="../html/categories.html#essentials"><i class="fa-solid fa-trowel-bricks"></i> Gardening Essentials</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../html/plantguide.html" class="active-link">Plant Guide</a></li>
+                <li><a href="../html/services.html">Services</a></li>
+                <li><a href="../html/orders.html">Orders</a></li>
+                <li><a href="../html/contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right Side Buttons -->
+        <div id="nav_btn">
+            <ul>
+                <!-- Search -->
+                <li>
+                    <a href="javascript:void(0)" id="search-toggle-btn" aria-label="Search" role="button">
+                        <i class="fa-solid fa-magnifying-glass" title="Search"></i>
+                    </a>
+                </li>
+
+                <!-- Wishlist -->
+                <li>
+                    <a href="../html/wishlist.html" aria-label="Wishlist">
+                        <i class="fa-regular fa-heart" title="Wishlist"><sup>0</sup></i>
+                    </a>
+                </li>
+
+                <!-- Cart -->
+                <li>
+                    <a href="../html/cart.html" aria-label="Shopping Cart">
+                        <i class="fa-sharp fa-solid fa-cart-shopping" title="Cart"><sup>0</sup></i>
+                    </a>
+                </li>
+
+                <!-- Profile -->
+                <li id="auth-nav-item">
+                    
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- PLANT GUIDE CONTENT -->
+    <main class="page-content">
+        <!-- ================= EXPANDABLE SEARCH BAR ================= -->
+        <div id="search-bar-container" class="search-container">
+            <form class="search-form" action="../html/plants.html" method="GET">
+                <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+                <input type="search" id="site-search-input" name="q" placeholder="Search plants, pots, essentials..." autocomplete="off" />
+                <button type="button" id="search-close-btn" aria-label="Close search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </form>
+        </div>
+        <section>
+            <button type="button" class="back-btn" onclick="goBack()" aria-label="Go back to previous page">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back</span>
+            </button>
+        </section>
+    </main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="small-title"><i class="fa-solid fa-seedling"></i> PLANT CARE MADE EASY</p>
+            <h1>Plant Care Guide</h1>
+            <p>
+                Learn how to take care of your plants with simple tips
+                about sunlight, watering, soil, temperature and more.
+            </p>
+            <a href="findyourplant.html" class="hero-btn">
+                Find My Plant &rarr;
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="../images/plantguide.webp" alt="Plant Guide">
+        </div>
+    </section>
+
+    <!-- LIGHT GUIDE -->
+    <section class="section">
+        <div class="section-heading">
+            <p><i class="fa-solid fa-sun"></i> UNDERSTAND LIGHT</p>
+            <h2>Choose the Right Light</h2>
+            <span>Different plants need different amounts of sunlight.</span>
+        </div>
+
+        <div class="light-container">
+            <div class="light-card">
+                <div class="icon"><i class="fa-solid fa-sun"></i></div>
+                <h3>Bright Direct Light</h3>
+                <p>Strong sunlight that reaches the plant directly.</p>
+                <b>Example: Aloe Vera</b>
+            </div>
+
+            <div class="light-card">
+                <div class="icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                <h3>Bright Indirect Light</h3>
+                <p>Bright surroundings without direct harsh sunlight.</p>
+                <b>Example: Peace Lily</b>
+            </div>
+
+            <div class="light-card">
+                <div class="icon"><i class="fa-solid fa-cloud"></i></div>
+                <h3>Medium Light</h3>
+                <p>A place with moderate natural light.</p>
+                <b>Example: Money Plant</b>
+            </div>
+
+            <div class="light-card">
+                <div class="icon"><i class="fa-solid fa-moon"></i></div>
+                <h3>Low Light</h3>
+                <p>Areas with little natural sunlight.</p>
+                <b>Example: Snake Plant</b>
+            </div>
+        </div>
+    </section>
+
+    <!-- WATERING -->
+    <section class="watering-section">
+        <div class="watering-image">
+            <img src="../images/wateryourplant.jpg" alt="Watering Plant">
+        </div>
+
+        <div class="watering-content">
+            <p class="small-title"><i class="fa-solid fa-droplet"></i> WATERING GUIDE</p>
+            <h2>Water Your Plants the Right Way</h2>
+            <p>
+                Avoid watering your plants on a fixed schedule.
+                Instead, check the soil before watering.
+            </p>
+
+            <div class="water-tips">
+                <div>
+                    <span>01</span>
+                    <p>Check if the top soil feels dry.</p>
+                </div>
+                <div>
+                    <span>02</span>
+                    <p>Water slowly until excess water drains out.</p>
+                </div>
+                <div>
+                    <span>03</span>
+                    <p>Never allow the plant to sit in water.</p>
+                </div>
+                <div>
+                    <span>04</span>
+                    <p>Reduce watering during cooler months.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARE CARDS -->
+    <section class="section">
+        <div class="section-heading">
+            <p><i class="fa-solid fa-leaf"></i> ESSENTIAL CARE</p>
+            <h2>Give Your Plants the Care They Need</h2>
+        </div>
+
+        <div class="care-container">
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-sun"></i></div>
+                <h3>Sunlight</h3>
+                <p>Place your plant where it receives the right amount of natural light.</p>
+            </div>
+
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-droplet"></i></div>
+                <h3>Water</h3>
+                <p>Water according to the plant's needs and soil moisture.</p>
+            </div>
+
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                <h3>Temperature</h3>
+                <p>Keep plants away from extreme heat and cold.</p>
+            </div>
+
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-wind"></i></div>
+                <h3>Humidity</h3>
+                <p>Tropical plants usually enjoy higher humidity levels.</p>
+            </div>
+
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Fertilizer</h3>
+                <p>Feed plants occasionally during their growing season.</p>
+            </div>
+
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-scissors"></i></div>
+                <h3>Pruning</h3>
+                <p>Remove dead and damaged leaves to encourage healthy growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMON PROBLEMS -->
+    <section class="problem-section">
+        <div class="section-heading">
+            <p><i class="fa-solid fa-magnifying-glass"></i> PLANT PROBLEMS</p>
+            <h2>What's Wrong With My Plant?</h2>
+            <span>Select a problem to find a simple solution.</span>
+        </div>
+
+        <div class="problem-buttons">
+            <button onclick="showProblem('yellow')">
+                <i class="fa-solid fa-leaf"></i> Yellow Leaves
+            </button>
+
+            <button onclick="showProblem('brown')">
+                <i class="fa-solid fa-fire-flame-simple"></i> Brown Tips
+            </button>
+
+            <button onclick="showProblem('drooping')">
+                <i class="fa-solid fa-arrow-trend-down"></i> Drooping
+            </button>
+
+            <button onclick="showProblem('slow')">
+                <i class="fa-solid fa-hourglass-half"></i> Slow Growth
+            </button>
+        </div>
+
+        <div id="problem-result" class="problem-result">
+            <h3>Select a plant problem</h3>
+            <p>
+                Choose one of the options above to see the possible
+                cause and solution.
+            </p>
+        </div>
+    </section>
+
+    <!-- BEGINNER PLANTS -->
+    <section class="section">
+        <div class="section-heading">
+            <p><i class="fa-solid fa-seedling"></i> FOR BEGINNERS</p>
+            <h2>Easy Plants to Grow</h2>
+            <span>Perfect choices if you are new to plant care.</span>
+        </div>
+
+        <div class="plant-slider">
+            <div class="plant-container">
+
+                <!-- 1 -->
+                <div class="plant-card">
+                    <img src="../images/snakeplant.jpg" alt="Snake Plant">
+                    <div class="plant-info">
+                        <h3>Snake Plant</h3>
+                        <p><i class="fa-solid fa-sun"></i> Low to bright indirect light</p>
+                        <p><i class="fa-solid fa-droplet"></i> Low watering</p>
+                        <span>Easy</span>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="plant-card">
+                    <img src="../images/moneyplant.jpg" alt="Money Plant">
+                    <div class="plant-info">
+                        <h3>Money Plant</h3>
+                        <p><i class="fa-solid fa-sun"></i> Medium indirect light</p>
+                        <p><i class="fa-solid fa-droplet"></i> Moderate watering</p>
+                        <span>Easy</span>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="plant-card">
+                    <img src="../images/aloe-vera.jpg" alt="Aloe Vera">
+                    <div class="plant-info">
+                        <h3>Aloe Vera</h3>
+                        <p><i class="fa-solid fa-sun"></i> Bright light</p>
+                        <p><i class="fa-solid fa-droplet"></i> Low watering</p>
+                        <span>Easy</span>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="plant-card">
+                    <img src="../images/peacelily.jpg" alt="Peace Lily">
+                    <div class="plant-info">
+                        <h3>Peace Lily</h3>
+                        <p><i class="fa-solid fa-sun"></i> Bright indirect light</p>
+                        <p><i class="fa-solid fa-droplet"></i> Moderate watering</p>
+                        <span>Medium</span>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="plant-card">
+                    <img src="../images/spiderplant.jpg" alt="Spider Plant">
+                    <div class="plant-info">
+                        <h3>Spider Plant</h3>
+                        <p><i class="fa-solid fa-sun"></i> Bright indirect light</p>
+                        <p><i class="fa-solid fa-droplet"></i> Moderate watering</p>
+                        <span>Easy</span>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="plant-card">
+                    <img src="../images/zz.jpg" alt="ZZ Plant">
+                    <div class="plant-info">
+                        <h3>ZZ Plant</h3>
+                        <p><i class="fa-solid fa-sun"></i> Low to medium light</p>
+                        <p><i class="fa-solid fa-droplet"></i> Low watering</p>
+                        <span>Easy</span>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="plant-card">
+                    <img src="../images/jadeplant.jpg" alt="Jade Plant">
+                    <div class="plant-info">
+                        <h3>Jade Plant</h3>
+                        <p><i class="fa-solid fa-sun"></i> Bright light</p>
+                        <p><i class="fa-solid fa-droplet"></i> Low watering</p>
+                        <span>Easy</span>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="plant-card">
+                    <img src="../images/rubberplant.jpg" alt="Rubber Plant">
+                    <div class="plant-info">
+                        <h3>Rubber Plant</h3>
+                        <p><i class="fa-solid fa-sun"></i> Bright indirect light</p>
+                        <p><i class="fa-solid fa-droplet"></i> Moderate watering</p>
+                        <span>Easy</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section class="checklist-section">
+        <div class="section-heading">
+            <p><i class="fa-solid fa-circle-check"></i> SIMPLE ROUTINE</p>
+            <h2>Plant Care Checklist</h2>
+        </div>
+
+        <div class="checklist">
+            <label>
+                <input type="checkbox">
+                Check sunlight
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Check soil moisture
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Water when required
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Remove damaged leaves
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Clean leaves regularly
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Fertilize when needed
+            </label>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Not Sure Which Plant Is Right for You?</h2>
+        <p>
+            Answer a few simple questions and PlantNest will
+            recommend a suitable plant for you.
+        </p>
+        <a href="findyourplant.html">
+            Find My Plant <i class="fa-solid fa-leaf"></i>
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">
+            <i class="fa-solid fa-leaf"></i> PlantNest
+        </div>
+        <p>
+            Making plant care simple, beautiful and enjoyable.
+        </p>
+
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="plants.html">Plants</a>
+            <a href="plantguide.html">Plant Guide</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact</a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 PlantNest. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="../js/profile.js"></script>
+    <script src="../js/plantguide.js"></script>
+</body>
+</html>

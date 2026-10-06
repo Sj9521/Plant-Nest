@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantNest | Wishlist</title>
+    <link rel="stylesheet" href="../css/wishlist.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Bar with Back Button -->
+    <header class="wishlist-topbar">
+        <button class="btn-back" onclick="history.back() || (window.location.href='../html/home.html')" aria-label="Go back">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+        </button>
+        <h1 class="wishlist-title">Wishlist</h1>
+        <div class="topbar-spacer"></div>
+    </header>
+
+    <!-- Main Dynamic Content -->
+    <main id="wishlist-container" class="wishlist-main">
+        <!-- Rendered by wishlist.js -->
+    </main>
+
+    <script src="../js/wishlist.js"></script>
+</body>
+</html>

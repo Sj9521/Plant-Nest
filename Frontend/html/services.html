@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/services.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>PlantNest | Services</title>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header id="navbar">
+
+        <!-- Logo -->
+        <div id="logo">
+            <i class="fa-solid fa-leaf"></i>
+            <span>PlantNest</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav id="nav_links">
+            <ul>
+                <li>
+                    <a href="../html/home.html">Home</a>
+                </li>
+
+                <!-- Plants Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Plants <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html/indoor.html"><i class="fa-solid fa-house-chimney-window"></i>
+                                Indoor Plants</a></li>
+                         <li><a href="../html/outdoor.html"><i class="fa-solid fa-tree"></i> 
+                                Outdoor Plants</a></li>
+                        <li><a href="../html/flowering.html"><i class="fa-solid fa-seedling"></i> 
+                                Flowering Plants</a></li>
+                        <li><a href="../html/succulents.html"><i class="fa-solid fa-spa"></i> 
+                                Succulents</a></li>
+                        <li><a href="../html/medicinal.html"><i class="fa-solid fa-mortar-pestle"></i>
+                                Medicinal Plants</a></li>
+                        <li><a href="../html/airpurifying.html"><i class="fa-solid fa-wind"></i> 
+                                Air Purifying Plants</a></li>
+                    </ul>
+                </li>
+
+                <!-- Categories Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Categories <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html/categories.html#indoor"><i class="fa-solid fa-couch"></i> Indoor Plants</a></li>
+                        <li><a href="../html/categories.html#outdoor"><i class="fa-solid fa-tree"></i> Outdoor Plants</a></li>
+                        <li><a href="../html/categories.html#flowering"><i class="fa-solid fa-fan"></i> Flowering Plants</a></li>
+                        <li><a href="../html/categories.html#seeds"><i class="fa-solid fa-wheat-awn"></i> Seeds</a></li>
+                        <li><a href="../html/categories.html#pots"><i class="fa-solid fa-box-archive"></i> Pots & Planters</a></li>
+                        <li><a href="../html/categories.html#essentials"><i class="fa-solid fa-trowel-bricks"></i> Gardening Essentials</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../html/plantguide.html">Plant Guide</a></li>
+                <li><a href="../html/services.html" class="active-link">Services</a></li>
+                <li><a href="../html/orders.html">Orders</a></li>
+                <li><a href="../html/contactus.html">Contact Us</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- Right Side Buttons -->
+        <div id="nav_btn">
+            <ul>
+                <!-- Search -->
+                <li>
+                    <a href="javascript:void(0)" id="search-toggle-btn" aria-label="Search" role="button">
+                        <i class="fa-solid fa-magnifying-glass" title="Search"></i>
+                    </a>
+                </li>
+
+                <!-- Wishlist -->
+                <li>
+                    <a href="../html/wishlist.html" aria-label="Wishlist">
+                        <i class="fa-regular fa-heart" title="Wishlist">
+                        <sup id="wishlist-counter">0</sup></i>
+                    </a>
+                </li>
+
+                <!-- Cart -->
+                <li>
+                    <a href="../html/cart.html" aria-label="Shopping Cart">
+                        <i class="fa-sharp fa-solid fa-cart-shopping" title="Cart">
+                        <sup id="cart-counter">0</sup></i>
+                    </a>
+                </li>
+
+                <!-- Profile -->
+                <li id="auth-nav-item"></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- Services CONTENT -->
+    <main class="page-content">
+
+        <button type="button" class="back-btn" onclick="goBack()" aria-label="Go back to previous page">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+        </button>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="tagline">WHAT WE OFFER</p>
+                <h1>Our <span>Services</span></h1>
+                <p>
+                    At Plant Nest, we provide everything you need
+                    to grow, maintain, and enjoy beautiful plants
+                    at home or in your workplace.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="section-heading">
+                <p>PLANT NEST SERVICES</p>
+                <h2>Helping Your Plants <span>Thrive</span></h2>
+                <p>
+                    Explore our range of plant and gardening services
+                    designed to make plant care simple and enjoyable.
+                </p>
+            </div>
+
+            <div class="service-container">
+
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3>Plant Delivery</h3>
+                    <p>Choose your favorite plants and have them delivered safely to your doorstep.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-hand-holding-droplet"></i>
+                    </div>
+                    <h3>Plant Care</h3>
+                    <p>Get useful guidance for watering, sunlight, fertilizing, pruning, and everyday plant care.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3>Gardening Consultation</h3>
+                    <p>Get personalized advice to create a healthy and beautiful garden that suits your space.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <h3>Plant Maintenance</h3>
+                    <p>Keep your plants healthy with regular maintenance, pruning, cleaning, and care.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                    </div>
+                    <h3>Home Garden Setup</h3>
+                    <p>We help you plan and create a refreshing green space for your home.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-plant-wilt"></i>
+                    </div>
+                    <h3>Repotting Service</h3>
+                    <p>Give your plants more room to grow with proper repotting and suitable soil selection.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-us">
+            <div class="why-content">
+                <p class="tagline">WHY PLANT NEST?</p>
+                <h2>We Care About Your <span>Plants</span></h2>
+                <p>
+                    From selecting the right plant to keeping it
+                    healthy, Plant Nest is here to support your
+                    gardening journey.
+                </p>
+
+                <div class="features">
+                    <div>
+                        <strong><i class="fa-solid fa-seedling feature-icon"></i> Quality Plants</strong>
+                        <p>Healthy and carefully selected plants.</p>
+                    </div>
+
+                    <div>
+                        <strong><i class="fa-solid fa-heart-pulse feature-icon"></i> Expert Guidance</strong>
+                        <p>Simple advice for better plant care.</p>
+                    </div>
+
+                    <div>
+                        <strong><i class="fa-solid fa-box-open feature-icon"></i> Safe Delivery</strong>
+                        <p>Plants packed carefully for delivery.</p>
+                    </div>
+
+                    <div>
+                        <strong><i class="fa-solid fa-headset feature-icon"></i> Customer Support</strong>
+                        <p>We're always happy to help.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action -->
+        <section class="cta">
+            <h2>Ready to Make Your Space Greener?</h2>
+            <p>
+                Get in touch with Plant Nest today and
+                start your green journey.
+            </p>
+            <a href="../html/contactus.html" class="cta-button">
+                Contact Us <i class="fa-solid fa-leaf"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <script src="../js/services.js"></script>
+</body>
+</html>

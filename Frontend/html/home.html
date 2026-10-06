@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantNest | Home</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header id="navbar">
+        <a href="../html/home.html" id="logo">
+            <i class="fa-solid fa-leaf"></i>
+            <span>PlantNest</span>
+        </a>
+
+        <nav id="nav_links">
+            <ul>
+                <li><a href="../html/home.html" class="active-link">Home</a></li>
+                
+                <!-- Plants Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Plants <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html/indoor.html"><i class="fa-solid fa-house-chimney-window"></i> Indoor Plants</a></li>
+                        <li><a href="../html/outdoor.html"><i class="fa-solid fa-tree"></i> Outdoor Plants</a></li>
+                        <li><a href="../html/flowering.html"><i class="fa-solid fa-seedling"></i> Flowering Plants</a></li>
+                        <li><a href="../html/succulents.html"><i class="fa-solid fa-spa"></i> Succulents</a></li>
+                        <li><a href="../html/medicinal.html"><i class="fa-solid fa-mortar-pestle"></i> Medicinal Plants</a></li>
+                        <li><a href="../html/airpurifying.html"><i class="fa-solid fa-wind"></i> Air Purifying Plants</a></li>
+                    </ul>
+                </li>
+
+                <!-- Categories Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Categories <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html/categories.html#outdoor"><i class="fa-solid fa-tree"></i> Plants</a></li>
+                        <li><a href="../html/categories.html#seeds"><i class="fa-solid fa-wheat-awn"></i> Seeds</a></li>
+                        <li><a href="../html/categories.html#pots"><i class="fa-solid fa-box-archive"></i> Pots & Planters</a></li>
+                        <li><a href="../html/categories.html#essentials"><i class="fa-solid fa-trowel-bricks"></i> Gardening Essentials</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../html/plantguide.html">Plant Guide</a></li>
+                <li><a href="../html/services.html">Services</a></li>
+                <li><a href="../html/orders.html">Orders</a></li>
+                <li><a href="../html/contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div id="nav_btn">
+            <ul>
+                <li>
+                    <a href="#hero-search-input" id="nav-search-trigger" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/wishlist.html" aria-label="Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <sup id="wishlist-counter">0</sup>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/cart.html" aria-label="Shopping Cart">
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        <sup id="cart-counter">0</sup>
+                    </a>
+                </li>
+                <li id="auth-nav-item">
+                    <a href="../html/login.html" class="login-btn">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="hero">
+            <div class="hero-content">
+                <p class="small-title">
+                    <i class="fa-solid fa-leaf"></i>
+                    Bring Nature Home
+                </p>
+
+                <h1>
+                    Make Your Home
+                    <span>Green & Beautiful</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover beautiful indoor and outdoor plants, pots, and gardening essentials to create your perfect green space.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="../html/plants.html" class="btn primary-btn">
+                        Shop Plants
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="../html/findyourplant.html" class="btn secondary-btn">
+                        Find Your Plant
+                    </a>
+                </div>
+
+                <form class="hero-search" id="hero-search-box" action="../html/plants.html" method="GET">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="hero-search-input" name="q"
+                        placeholder="Search indoor plants, succulents, pots..." aria-label="Search plants and products"
+                        required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <div class="hero-image-section">
+                <div class="image-frame">
+                    <img src="../images/aboutus.avif" alt="Featured Plant Collection" class="hero-plant-img">
+
+                    <div class="hero-badge badge-top">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Bestseller</span>
+                    </div>
+
+                    <div class="hero-badge badge-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <strong>4.9</strong>
+                        <span>(2.4k+ reviews)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <div>
+                    <h3>Fast Delivery</h3>
+                    <p>Safe & quick delivery</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                    <h3>Healthy Plants</h3>
+                    <p>Fresh & carefully grown</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Quality you can trust</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                    <h3>Plant Support</h3>
+                    <p>Help whenever you need</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/home.js"></script>
+</body>
+
+</html>

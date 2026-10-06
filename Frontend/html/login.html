@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantNest | Login</title>
+
+    <link rel="stylesheet" href="../css/login.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="back">
+        <button type="button" class="back-btn" onclick="goBack()" aria-label="Go back to previous page">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+        </button>
+    </div>
+    <div id="container">
+
+        <form id="loginForm">
+
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>PlantNest</span>
+            </div>
+
+            <h2 id="title">Welcome Back!</h2>
+
+            <p class="subtitle">Login to your account</p>
+
+            <div id="input_group">
+
+                <div class="input_box">
+                    <label for="email">
+                        Email<sup>*</sup>
+                    </label>
+
+                    <div class="input_wrapper">
+                        <i class="fa-regular fa-envelope input_icon"></i>
+
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <small id="errore"></small>
+                </div>
+
+                <div class="input_box">
+                    <label for="password">
+                        Password<sup>*</sup>
+                    </label>
+
+                    <div class="input_wrapper">
+                        <i class="fa-solid fa-lock input_icon"></i>
+
+                        <input type="password" id="password" placeholder="Enter your password">
+
+                        <span id="eye" onclick="showpassword()">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </span>
+                    </div>
+
+                    <small id="errorp"></small>
+                </div>
+
+            </div>
+
+            <button id="btn" type="submit">
+                Login
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p id="create_account">
+                <span>New user?</span>
+                <a href="./signup.html">Sign Up</a>
+            </p>
+
+        </form>
+
+    </div>
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
